@@ -1,4 +1,9 @@
+
 import java.util.ArrayList;
+
+import DAO.ClientDAO;
+import MLO.Client;
+import MLO.Connexion;
 
 public class Main {
     public static void main(String[] args) 
@@ -14,7 +19,8 @@ public class Main {
             // CREATE TABLE Fournisseur ( idf INT AUTO_INCREMENT PRIMARY KEY, nomf VARCHAR(255) NOT NULL ); 
             // CREATE TABLE Produit ( idp INT AUTO_INCREMENT PRIMARY KEY, designation VARCHAR(255) NOT NULL, prix DOUBLE NOT NULL CHECK (prix >= 0), quantiteStock INT NOT NULL CHECK (quantiteStock >= 0), idf INT, FOREIGN KEY (idf) REFERENCES Fournisseur(idf) ON DELETE CASCADE ON UPDATE CASCADE ); 
             // CREATE TABLE Commande ( idcom INT AUTO_INCREMENT PRIMARY KEY, quantite INT NOT NULL CHECK (quantite > 0), estlivre BOOLEAN NOT NULL, idt INT, idp INT, FOREIGN KEY (idt) REFERENCES Ticket(idt) ON UPDATE CASCADE, FOREIGN KEY (idp) REFERENCES Produit(idp) ON UPDATE CASCADE ); 
-
+        
+        // Creation ClientDAO class and testé avec succès toutes le CRUD sur le commit [ develop 927cd82 ] 
         
         System.out.println("Bonjour java\n\n");
 
