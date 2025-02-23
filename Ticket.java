@@ -6,7 +6,7 @@ public class Ticket
     private int idt;
     private LocalDate datet;
     private LocalTime heuret;
-    
+    private int idc;
     public Ticket() 
     {
         this.idt = 0;
@@ -14,12 +14,14 @@ public class Ticket
         // Par défaut, on initialise à null
         this.heuret = null;
         // Par défaut, on initialise à null
+        this.idc=0;
     }
-    public Ticket(int idt, LocalDate datet, LocalTime heuret) 
+    public Ticket(int idt, LocalDate datet, LocalTime heuret, int idc) 
     {
         this.idt = idt;
         this.datet = datet;
         this.heuret = heuret;
+        this.idc=idc;
     }
     public int getIdt() 
     {
@@ -33,7 +35,12 @@ public class Ticket
     {
         return this.heuret;
     }
+    public int getIdc()
+    {
+        return this.idc;
+    }
     
+
     public void setIdt(int idt) 
     {
         this.idt = idt;
@@ -57,4 +64,9 @@ public class Ticket
         this.heuret = LocalTime.of(hour,minute,second);
     }
     // Cette méthode sert directement à passer comme paramètres hour, minute, second 
+
+    public void setIdc(int idc)
+    {
+        this.idc=idc;
+    }
 }
