@@ -1,17 +1,23 @@
+import java.util.ArrayList;
+
 public class Fournisseur 
 {
     private int idf;
     private String nomf;
+    private ArrayList<Produit> produits;
+
     
     public Fournisseur() 
     {
         this.idf = 0;
         this.nomf = "";
+        this.produits=null;
     }
-    public Fournisseur(int idf, String nomf) 
+    public Fournisseur(int idf, String nomf, ArrayList<Produit> produits) 
     {
         this.idf = idf;
         this.nomf = nomf;
+        this.produits=produits;
     }
     public int getIdf() 
     {
@@ -21,6 +27,10 @@ public class Fournisseur
     {
         return this.nomf;
     }
+    public ArrayList<Produit> getProduits()
+    {
+        return this.produits;
+    }
 
     public void setIdf(int idf) 
     {
@@ -29,6 +39,10 @@ public class Fournisseur
     public void setNomf(String nomf) 
     {
         this.nomf = nomf;
+    }
+    public void setProduits(ArrayList<Produit> produits)
+    {
+        this.produits=produits;
     }
 
 }
