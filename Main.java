@@ -20,7 +20,8 @@ public class Main {
             // CREATE TABLE Produit ( idp INT AUTO_INCREMENT PRIMARY KEY, designation VARCHAR(255) NOT NULL, prix DOUBLE NOT NULL CHECK (prix >= 0), quantiteStock INT NOT NULL CHECK (quantiteStock >= 0), idf INT, FOREIGN KEY (idf) REFERENCES Fournisseur(idf) ON DELETE CASCADE ON UPDATE CASCADE ); 
             // CREATE TABLE Commande ( idcom INT AUTO_INCREMENT PRIMARY KEY, quantite INT NOT NULL CHECK (quantite > 0), estlivre BOOLEAN NOT NULL, idt INT, idp INT, FOREIGN KEY (idt) REFERENCES Ticket(idt) ON UPDATE CASCADE, FOREIGN KEY (idp) REFERENCES Produit(idp) ON UPDATE CASCADE ); 
         
-        // Creation ClientDAO class and testé avec succès toutes le CRUD sur le commit [ develop 927cd82 ] 
+        // Creation ClientDAO class and testé avec succès toutes le CRUD sur le commit [ develop 927cd82 ]
+        // Restructuer toutes les dossiers en creant DAO(contenant tous les classes DAO) et aussi MLO(Contenant tous les classes Modèle Logique Objet) et retester les codes, ça fonctionne avec succès  sur le commit [ develop 8116f7d ]
         
         System.out.println("Bonjour java\n\n");
 
