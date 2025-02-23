@@ -1,4 +1,5 @@
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.time.LocalDate;
 
 public class Ticket 
@@ -7,6 +8,8 @@ public class Ticket
     private LocalDate datet;
     private LocalTime heuret;
     private int idc;
+    private ArrayList<Commande> commandes;
+
     public Ticket() 
     {
         this.idt = 0;
@@ -15,13 +18,15 @@ public class Ticket
         this.heuret = null;
         // Par défaut, on initialise à null
         this.idc=0;
+        this.commandes=null;
     }
-    public Ticket(int idt, LocalDate datet, LocalTime heuret, int idc) 
+    public Ticket(int idt, LocalDate datet, LocalTime heuret, int idc, ArrayList<Commande> commandes) 
     {
         this.idt = idt;
         this.datet = datet;
         this.heuret = heuret;
         this.idc=idc;
+        this.commandes=commandes;
     }
     public int getIdt() 
     {
@@ -39,7 +44,10 @@ public class Ticket
     {
         return this.idc;
     }
-    
+    public ArrayList<Commande> getCommandes()
+    {
+        return this.commandes;
+    }
 
     public void setIdt(int idt) 
     {
@@ -68,5 +76,9 @@ public class Ticket
     public void setIdc(int idc)
     {
         this.idc=idc;
+    }
+    public void setCommandes(ArrayList<Commande> commandes)
+    {
+        this.commandes=commandes;
     }
 }
