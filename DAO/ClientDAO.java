@@ -3,7 +3,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import MLO.Client;
-import MLO.DAO;
 import MLO.Ticket;
 
 public class ClientDAO extends DAO<Client> 

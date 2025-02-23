@@ -3,7 +3,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import MLO.Ticket;
-import MLO.DAO;
 import MLO.Commande;
 
 public class TicketDAO extends DAO<Ticket> 

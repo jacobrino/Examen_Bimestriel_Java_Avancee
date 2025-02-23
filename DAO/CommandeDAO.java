@@ -3,7 +3,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import MLO.Commande;
-import MLO.DAO;
 
 public class CommandeDAO extends DAO<Commande> 
 {

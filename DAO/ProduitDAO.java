@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import MLO.Produit;
 import MLO.Commande;
-import MLO.DAO;
 
 public class ProduitDAO extends DAO<Produit> 
 {

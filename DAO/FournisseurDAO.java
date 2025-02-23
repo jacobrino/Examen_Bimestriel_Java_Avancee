@@ -3,7 +3,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import MLO.Fournisseur;
-import MLO.DAO;
 import MLO.Produit;
 
 public class FournisseurDAO extends DAO<Fournisseur> 
