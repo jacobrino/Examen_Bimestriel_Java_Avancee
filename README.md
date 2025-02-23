@@ -1,4 +1,4 @@
-*Examen Bimestriel Java Avancé
+*Java Avancé
 
 *Ce projet a pour objectif la liaison d'une base de données relationnelle avec le langage de programmation Java en utilisant le package mysql-connector.
 Historique des commits
