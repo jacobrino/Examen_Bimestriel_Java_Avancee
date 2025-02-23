@@ -3,7 +3,7 @@ public class Produit
     private int idp;
     private String designation;
     private double prix;
-    // On a mit la variable prix en double car un prix peut avoir une virgule. Comme 200,95 ariary
+    // On a mis la variable prix en double car un prix peut avoir une virgule. Comme 200,95 ariary
     private int quantiteStock;
     public Produit() 
     {
