@@ -36,8 +36,8 @@ Historique des commits
 
     Commandes à utiliser :
 
-    javac -cp ".:mysql-connector-j-9.2.0.jar" Main.java
+        Compilation : javac -cp ".:mysql-connector-j-9.2.0.jar" Main.java
 
-    java -cp ".:mysql-connector-j-9.2.0.jar" Main
+        Exécution : java -cp ".:mysql-connector-j-9.2.0.jar" Main
 
     Note : Le fichier "mysql-connector-j-9.2.0.jar" doit se trouver dans le même répertoire que le fichier "Main.java".
