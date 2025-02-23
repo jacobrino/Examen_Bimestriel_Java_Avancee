@@ -6,7 +6,7 @@ public class Connexion
 {
     private String url = "jdbc:mysql://127.0.0.1/test_java_avance";
     private String utilisateur = "phpmyadmin";
-    private String passe = "000";
+    private String passe = "0000";
     // Le mot de passe est juste pour test, mais normallement en terme de sécurité, on ne met pas de mot de passe aussi simple que ça.
 
     private static Connection cx=null;
