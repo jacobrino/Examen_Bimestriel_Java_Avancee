@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public abstract class DAO<T> 
 {
-    protected Connection cx = null;
+    protected Connection cx;
     public DAO(Connection cx) 
     {
         this.cx = cx;

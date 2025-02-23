@@ -10,6 +10,7 @@ public class ClientDAO extends DAO<Client>
     
     public boolean insertion(Client client) 
     {
+        // Ok après test
         try 
         {
             PreparedStatement ps = this.cx.prepareStatement("INSERT INTO Client VALUES(null, ?)");
@@ -26,8 +27,9 @@ public class ClientDAO extends DAO<Client>
     
     public boolean miseAJour(Client client) 
     {
+        // Ok après test
         try 
-        {
+        {            
             PreparedStatement ps = this.cx.prepareStatement("UPDATE Client SET nomc = ? WHERE idc = ?");
             ps.setString(1, client.getNomc());
             ps.setInt(2, client.getIdc());
@@ -43,6 +45,7 @@ public class ClientDAO extends DAO<Client>
     
     public boolean suppression(Client client) 
     {
+        // Ok après test
         try 
         {
             PreparedStatement ps = this.cx.prepareStatement("DELETE FROM Client WHERE idc = ?");
@@ -59,9 +62,12 @@ public class ClientDAO extends DAO<Client>
     
     public ArrayList<Client> selection() 
     {
+        // Ok après test
+
         try 
         {
             ArrayList<Client> liste = new ArrayList<>();
+            ArrayList<Ticket> tempTicket = new ArrayList<>();
             PreparedStatement ps = this.cx.prepareStatement("SELECT * FROM Client");
             ResultSet rs = ps.executeQuery();
             
@@ -71,7 +77,7 @@ public class ClientDAO extends DAO<Client>
                 liste.add(c);
             }
             
-            ps = this.cx.prepareStatement("SELECT * FROM ticket");
+            ps = this.cx.prepareStatement("SELECT * FROM Ticket");
             rs = ps.executeQuery();
             
             while (rs.next()) 
@@ -80,8 +86,11 @@ public class ClientDAO extends DAO<Client>
                 {
                     if (c.getIdc() == rs.getInt("idc")) 
                     {
-                        // Ticket t = new Ticket(rs.getInt("idt"), rs.getString("details"), rs.getInt("idc"));
-                        // c.getTickets().add(t);
+                        Ticket t = new Ticket(rs.getInt("idt"), rs.getDate("datet").toLocalDate(), rs.getTime("heuret").toLocalTime(),rs.getInt("idc"),null);
+                        tempTicket.add(t);
+                        System.out.println("Ticket reference : "+t);
+
+                        c.setTickets(tempTicket);;
                     }
                 }
             }
