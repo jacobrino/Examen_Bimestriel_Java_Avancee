@@ -2,8 +2,10 @@
 import java.util.ArrayList;
 
 import DAO.ClientDAO;
+import DAO.TicketDAO;
 import MLO.Client;
 import MLO.Connexion;
+import MLO.Ticket;
 
 public class Main {
     public static void main(String[] args) 
@@ -29,17 +31,14 @@ public class Main {
         // DAO<Matiere> matieredao = new MatiereDAO(Connexion.getInstance());
         
         
-        ClientDAO clientDAO = new ClientDAO(Connexion.getInstance());
-        
+        // ClientDAO clientDAO = new ClientDAO(Connexion.getInstance());
+        TicketDAO ticketDao=new TicketDAO(Connexion.getInstance());
         // Test sélection
-        ArrayList<Client> clients = clientDAO.selection();
-        for (Client c : clients) 
+        ArrayList<Ticket> tickets = ticketDao.selection();
+        for (Ticket c : tickets) 
         {
-            System.out.println("Client ID: " + c.getIdc() + ", Nom: " + c.getNomc()+" Tickets : "+c.getTickets());
-            
-            System.out.println("Ticket[0]   :   " + c.getTickets().get(0));
-            System.out.println("Heure ticket   :  "+c.getTickets().get(0).getHeuret());
-            System.out.println("Date ticket   :  "+c.getTickets().get(0).getDatet());
+            System.out.println("Ticket ID: " + c.getIdt() );
+
 
 
         }
