@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 
 import DAO.ClientDAO;
+import DAO.FournisseurDAO;
 import DAO.TicketDAO;
 import MLO.Client;
 import MLO.Connexion;
@@ -26,24 +27,6 @@ public class Main {
         // Restructuer toutes les dossiers en creant DAO(contenant tous les classes DAO) et aussi MLO(Contenant tous les classes Modèle Logique Objet) et retester les codes, ça fonctionne avec succès  sur le commit [ develop 8116f7d ]
         
         System.out.println("Bonjour java\n\n");
-
-        // DAO<Prof> profdao = new ProfDAO(Connexion.getInstance());
-        // DAO<Matiere> matieredao = new MatiereDAO(Connexion.getInstance());
-        
-        
-        // ClientDAO clientDAO = new ClientDAO(Connexion.getInstance());
-        TicketDAO ticketDao=new TicketDAO(Connexion.getInstance());
-        // Test sélection
-        ArrayList<Ticket> tickets = ticketDao.selection();
-        for (Ticket c : tickets) 
-        {
-            System.out.println("Ticket ID: " + c.getIdt() );
-
-
-
-        }
-        
-            
          
         
         
