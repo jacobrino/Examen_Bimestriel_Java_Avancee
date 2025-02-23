@@ -3,6 +3,7 @@ public class Commande
     private int idcom;
     private int quantite;
     private boolean estlivre;
+    private int idt;
     
     public Commande() 
     {
@@ -10,12 +11,14 @@ public class Commande
         this.quantite = 0;
         this.estlivre = false;
         // Par défaut, on met estlivre à false, car la commande est par défaut non livré dans notre logique.
+        this.idt=0;
     }
-    public Commande(int idcom, int quantite, boolean estlivre) 
+    public Commande(int idcom, int quantite, boolean estlivre, int idt) 
     {
         this.idcom = idcom;
         this.quantite = quantite;
         this.estlivre = estlivre;
+        this.idt=idt;
     }
     public int getIdcom() 
     {
@@ -29,6 +32,11 @@ public class Commande
     {
         return this.estlivre;
     }
+    public int getIdt()
+    {
+        return this.idt;
+    }
+
     public void setIdcom(int idcom) 
     {
         this.idcom = idcom;
@@ -40,5 +48,9 @@ public class Commande
     public void setEstlivre(boolean estlivre) 
     {
         this.estlivre = estlivre;
+    }
+    public void setIdt(int idt)
+    {
+        this.idt=idt;
     }
 }
