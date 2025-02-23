@@ -13,9 +13,6 @@ public class Main {
         
         // Toutes les classes du modèle logique object finish sur le commit [ develop b9d9456 ]
         // La classe Connexion est initié et testé avec succes avec la base de donnée 'test_java_avance' sur le commit [ develop 6395174 ]
-        // Création de chaque table mysql de chaque class 
-        // Normallement, on doit d'abord convetir en MLD la base de donnée pour faciliter la liaison avec la base de donnée.
-
             // CREATE TABLE Client ( idc INT AUTO_INCREMENT PRIMARY KEY, nomc VARCHAR(255) NOT NULL ); 
             // CREATE TABLE Ticket ( idt INT AUTO_INCREMENT PRIMARY KEY, datet DATE NOT NULL, heuret TIME NOT NULL, idc INT, FOREIGN KEY (idc) REFERENCES Client(idc) ON DELETE CASCADE ON UPDATE CASCADE); 
             // CREATE TABLE Fournisseur ( idf INT AUTO_INCREMENT PRIMARY KEY, nomf VARCHAR(255) NOT NULL ); 
