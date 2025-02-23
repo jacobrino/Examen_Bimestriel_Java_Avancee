@@ -24,6 +24,7 @@ public class Main {
         
         // Creation ClientDAO class and testé avec succès toutes le CRUD sur le commit [ develop 927cd82 ]
         // Restructuer toutes les dossiers en creant DAO(contenant tous les classes DAO) et aussi MLO(Contenant tous les classes Modèle Logique Objet) et retester les codes, ça fonctionne avec succès  sur le commit [ develop 8116f7d ]
+        // Restructurer à nouveau les dossiers sur le commit [ develop f438c82 ]
         
         System.out.println("Bonjour java\n\n");
 
